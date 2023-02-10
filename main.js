@@ -1,0 +1,1 @@
+alert("js ready to work!")
