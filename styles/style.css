@@ -1,3 +1,36 @@
-body{
-    background-color: aquamarine;
+/*--colors--*/
+.color-pallete{
+    color:#454545;
+    color:#743455;
+    color:#a22365;
+    color:#d11174;
+    color: #ff0084;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color:#454545;
+}
+
+
+.navbar-brand img{
+    max-width: 25%;
+}
+
+.header-page{
+    background-color: #d90368;
+    color:aliceblue;
+}
+
+.header-page span{
+    color: aliceblue;
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+.category-check{
+    min-width: 500px;
 }
