@@ -19,7 +19,7 @@
 }
 
 .header-page{
-    background-color: #d90368;
+    background: linear-gradient(158deg, rgba(162,35,101,1) 0%, rgba(217,3,104,1) 54%, rgba(162,35,101,1) 100%);
     color:aliceblue;
 }
 
@@ -52,7 +52,7 @@ footer{
     background-color: #a22365;
 }
 
-footer h3, i{
+footer h3, footer i{
     color: aliceblue;
 }
 
@@ -61,4 +61,30 @@ footer i{
     margin: 0.5rem;
 }
 
+.form-container label, .form-container legend{
+    color:#a22365;
+}
 
+.form-container legend{
+    text-align: center;
+}
+
+.form-container{
+    max-width: 550px;
+    background-color: rgba(255, 255, 255, 0.801);
+    filter:blur(50%);
+    box-shadow: -1px 2px 27px -1px rgba(0,0,0,0.75);
+}
+
+.contact-main{
+    background-image: url(../assets/people.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+}
+
+::placeholder{
+    font-size: small;
+    font-style: italic;
+    color:rgba(95, 93, 93, 0.575)
+}
