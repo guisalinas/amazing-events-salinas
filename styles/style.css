@@ -4,9 +4,8 @@
     color:#743455;
     color:#a22365;
     color:#d11174;
-    color: #ff0084;
+    color:#ff0084;
 }
-
 
 *{
     padding: 0;
@@ -14,7 +13,6 @@
     box-sizing: border-box;
     color:#454545;
 }
-
 
 .navbar-brand img{
     max-width: 25%;
@@ -31,6 +29,34 @@
     font-size: 2em;
 }
 
-.category-check{
-    min-width: 500px;
+.btn-card{
+    background-color: #454545;
+    color: aliceblue;
+}
+
+.card{
+    margin-left: 5px;
+    margin-right: 2.5px;
+}
+
+.card h5{
+    color: #d90368;
+}
+
+.card-img-top{
+    height: 150px;
+    object-fit: cover;
+}
+
+footer{
+    background-color: #a22365;
+}
+
+footer h3, i{
+    color: aliceblue;
+}
+
+footer i{
+    font-size: 150%;
+    margin: 0.5rem;
 }
