@@ -56,8 +56,11 @@ footer i{
 
 /*--card--*/
 .btn-card{
-    background-color: #454545;
-    color: aliceblue;
+    color: #a22365;
+}
+
+.btn-card:hover{
+    border:solid 1px #a22365;
 }
 
 .card{
