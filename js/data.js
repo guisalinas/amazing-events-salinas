@@ -1,3 +1,10 @@
+// This function extracts the categories from the array events, in dataEvents object.
+function getCategories(){
+    let uniqueCategory = [...new Set(dataEvents.events.map(event => event.category))];
+    return uniqueCategory;
+}
+
+/* --- Array data --- */
 let dataEvents = {
     "currentDate": "2022-09-01",
     "events": [
