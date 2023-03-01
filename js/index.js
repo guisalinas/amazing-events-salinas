@@ -1,4 +1,5 @@
 const cardContainer = document.getElementById('cardContainer');
+const searcher = document.getElementById('searcher');
 
 function addCard(data) {
   let card = "";
@@ -12,7 +13,7 @@ function addCard(data) {
                   </div>
                   <div class="d-flex justify-content-between aligne-items-center">
                         <h6 class="card-text text-end mt-2 ms-3">Price: $${event.price}</h6>
-                        <a href="./details.html" class="btn btn-sm btn-card me-3 mb-3">Show More</a>
+                        <a href="./details.html" class="btn btn-sm btn-secondary me-3 mb-3">Show More</a>
                     </div>
               </div>`
   }
@@ -22,3 +23,11 @@ function addCard(data) {
 let cardElement = addCard(dataEvents.events);
 
 cardContainer.innerHTML = cardElement;
+
+// Searcher filter
+
+searcher.addEventListener("change", ()=>{
+  let filterEvent = dataEvents.events.filter( (eventToFilter) => eventToFilter.name.toLowerCase().includes(searcher.value.toLowerCase()));
+  console.log(filterEvent);
+});
+
