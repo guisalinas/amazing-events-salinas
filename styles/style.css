@@ -55,12 +55,6 @@ footer i{
 }
 
 /*--card--*/
-.btn-card{
-    color: #a22365;
-}
-
-
-
 .card{
     box-shadow: -1px 2px 20px -1px rgba(163, 161, 163, 0.75);
 }
@@ -106,4 +100,10 @@ footer i{
 .card-detail{
     max-width: 800px;
     border: solid 3px #d11174;
+}
+
+/*--- not found message*/
+.search-text-message{
+    color: #a22365;
+    font-weight: bolder;
 }

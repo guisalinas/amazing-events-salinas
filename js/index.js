@@ -1,5 +1,5 @@
 const cardContainer = document.getElementById('cardContainer');
-const searcher = document.getElementById('searcher');
+const currentDate = dataEvents.currentDate;
 
 function addCard(data) {
   let card = "";
@@ -24,10 +24,7 @@ let cardElement = addCard(dataEvents.events);
 
 cardContainer.innerHTML = cardElement;
 
-// Searcher filter
-
-searcher.addEventListener("change", ()=>{
-  let filterEvent = dataEvents.events.filter( (eventToFilter) => eventToFilter.name.toLowerCase().includes(searcher.value.toLowerCase()));
-  console.log(filterEvent);
-});
-
+// This function is used from filterBar.js, to filter the events according to their date (search bar). 
+function filterEventsByNameAndDate(name, date) {
+  return dataEvents.events.filter(event => event.name.toLowerCase().includes(name.toLowerCase()) && (event.date < date || event.date > date));
+}

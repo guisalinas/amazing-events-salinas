@@ -21,3 +21,36 @@ function addCategoryCheckBox(arrayCategories) {
 
 let categoryElement = addCategoryCheckBox(getCategories());
 checkCategory.innerHTML = categoryElement;
+
+// // Searcher-bar filter
+const searcher = document.getElementById('searcher');
+
+searcher.addEventListener("change", () => {
+    let filteredEvents = filterEventsByNameAndDate(searcher.value, currentDate);
+
+    if (filteredEvents.length == 0 || filteredEvents == null) {
+        cardContainer.innerHTML = notFoundMessage(searcher.value);
+    } else {
+
+        cardContainer.innerHTML = addCard(filteredEvents);
+    }
+});
+
+
+//notFoundMesage
+const titleSection = document.getElementById("section-title").textContent;
+
+function notFoundMessage(searchText) {
+    return divMessage = `<div class="container d-flex justify-content-between align-items-center">
+        <div class="img-notFound">
+            <img src="./assets/notFound.png" alt="message: not found">
+        </div>
+        <div>
+            <h3>Vaya! No encontramos <span class="search-text-message">"${searchText}"</span>!</h3>
+            <p>Parece que no es un evento disponible en la sección "${titleSection}".</p>
+            <p>Intenta utilizar los filtros por categorias de acuerdo a tus eventos favoritos, o chequea en otras secciones de la web!<p>
+        </div>
+    </div>`
+};
+
+//checkBox filter

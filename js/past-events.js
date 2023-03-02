@@ -6,7 +6,6 @@ function addCard(data) {
 
     for (const event of data) {
         if (event.date < currentDate) {
-
             card += `<div id="eventCard" class="card m-2" style="width: 16rem;">
                     <img src=${event.image} class="card-img-top" alt="...">
                     <div class="card-body">
@@ -24,5 +23,9 @@ function addCard(data) {
 }
 
 let cardElement = addCard(dataEvents.events);
-
 cardContainer.innerHTML = cardElement;
+
+// This function is used from filterBar.js, to filter the events according to their date (search bar). 
+function filterEventsByNameAndDate(name, date) {
+    return dataEvents.events.filter(event => event.name.toLowerCase().includes(name.toLowerCase()) && event.date < date);
+}
