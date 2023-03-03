@@ -41,16 +41,17 @@ searcher.addEventListener("change", () => {
 const titleSection = document.getElementById("section-title").textContent;
 
 function notFoundMessage(searchText) {
-    return divMessage = `<div class="container d-flex justify-content-between align-items-center">
+    return divMessage = `<div class="container ps-2 d-flex justify-content-between align-items-center">
         <div class="img-notFound">
-            <img src="./assets/notFound.png" alt="message: not found">
+            <img src="../assets/notFound.png" alt="message: not found">
         </div>
         <div>
             <h3>Vaya! No encontramos <span class="search-text-message">"${searchText}"</span>!</h3>
-            <p>Parece que no es un evento disponible en la sección "${titleSection}".</p>
+            <p>Parece que no el evento no existe, o no está disponible en la sección "${titleSection}".</p>
             <p>Intenta utilizar los filtros por categorias de acuerdo a tus eventos favoritos, o chequea en otras secciones de la web!<p>
         </div>
     </div>`
 };
 
 //checkBox filter
+
