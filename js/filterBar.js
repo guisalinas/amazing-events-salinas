@@ -22,9 +22,34 @@ let categoryElement = addCategoryCheckBox(getCategories());
 checkCategory.innerHTML = categoryElement;
 
 // Searcher-bar filter:
-const searcher = document.getElementById('searcher');
 
-searcher.addEventListener("change", () => {
+//const searcher = document.getElementById('searcher');
+
+// searcher.addEventListener("change", () => {
+//     let filteredEvents = filterEventsByNameAndDate(searcher.value, currentDate);
+
+//     if (filteredEvents.length == 0 || filteredEvents == null) {
+//         cardContainer.innerHTML = notFoundMessage(searcher.value);
+//     } else {
+
+//         cardContainer.innerHTML = addCard(filteredEvents);
+//     }
+// });
+
+const btnSearch = document.getElementById('btnSearch');
+const searcher = document.getElementById('searcher');
+const checkBoxes = document.querySelectorAll('.check_box'); 
+
+btnSearch.addEventListener('click', (event)=>{
+    
+    event.preventDefault();
+
+    checkBoxes.forEach((category)=>{
+        if (category.checked == true){
+            console.log(category.value);
+        }})
+
+
     let filteredEvents = filterEventsByNameAndDate(searcher.value, currentDate);
 
     if (filteredEvents.length == 0 || filteredEvents == null) {
@@ -34,6 +59,7 @@ searcher.addEventListener("change", () => {
         cardContainer.innerHTML = addCard(filteredEvents);
     }
 });
+
 
 //notFoundMesage
 const titleSection = document.getElementById("section-title").textContent;
