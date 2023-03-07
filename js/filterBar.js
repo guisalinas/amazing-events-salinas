@@ -12,9 +12,8 @@ function addCategoryCheckBox(arrayCategories) {
 
     for (let category of arrayCategories) {
         inputCategory += `<div>
-                            <input type="checkbox" name="_${category}" id="category" value="${category}">
-                            <label for="category">${category}</label>
-                            </div>`
+                        <label> <input type="checkbox" name="categoryCheck" class="check_box" id="${category}" value="${category}"> ${category} </label>
+                        </div>`
     }
     return inputCategory;
 }
@@ -22,7 +21,7 @@ function addCategoryCheckBox(arrayCategories) {
 let categoryElement = addCategoryCheckBox(getCategories());
 checkCategory.innerHTML = categoryElement;
 
-// // Searcher-bar filter
+// Searcher-bar filter:
 const searcher = document.getElementById('searcher');
 
 searcher.addEventListener("change", () => {
@@ -36,7 +35,6 @@ searcher.addEventListener("change", () => {
     }
 });
 
-
 //notFoundMesage
 const titleSection = document.getElementById("section-title").textContent;
 
@@ -47,11 +45,10 @@ function notFoundMessage(searchText) {
         </div>
         <div>
             <h3>Vaya! No encontramos <span class="search-text-message">"${searchText}"</span>!</h3>
-            <p>Parece que no el evento no existe, o no está disponible en la sección "${titleSection}".</p>
-            <p>Intenta utilizar los filtros por categorias de acuerdo a tus eventos favoritos, o chequea en otras secciones de la web!<p>
+            <p>Parece que no el evento no existe, o no está disponible en la sección "${titleSection.toLowerCase()}".</p>
+            <p>Intenta utilizar diferentes filtros por categorias de acuerdo a tus eventos favoritos, o chequea en otras secciones de la web!<p>
         </div>
     </div>`
 };
 
-//checkBox filter
 

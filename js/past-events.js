@@ -13,8 +13,8 @@ function addCard(data) {
                         <p class="card-text text-center">${event.description}</p>
                     </div>
                     <div class="d-flex justify-content-between aligne-items-center">
-                        <h6 class="card-text text-end mt-2 ms-3">Price: $${event.price}</h6>
-                        <a href="./details.html" class="btn btn-sm btn-secondary me-3 mb-3">Show More</a>
+                        <h6 class="card-text text-end mt-2 ms-3"> Price: $${event.price}</h6>
+                        <a href="./details.html?id=${event._id}" class="btn btn-sm btn-secondary me-3 mb-3">Show More</a>
                     </div>
                     </div>`
         }

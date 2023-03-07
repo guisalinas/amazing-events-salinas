@@ -107,3 +107,7 @@ footer i{
     color: #a22365;
     font-weight: bolder;
 }
+
+p.text-justify {
+    text-align: justify;
+}
