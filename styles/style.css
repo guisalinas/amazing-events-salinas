@@ -102,6 +102,11 @@ footer i{
     border: solid 3px #d11174;
 }
 
+.img-detail{
+    height: 200px;
+    object-fit: cover;
+}
+
 /*--- not found message*/
 .search-text-message{
     color: #a22365;

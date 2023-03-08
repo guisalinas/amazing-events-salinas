@@ -1,19 +1,18 @@
 const queryString = location.search;
-console.log(queryString);
 
 const params = new URLSearchParams(queryString);
 
-const id = params.get("_id");
+const id = params.get("id");
 
-const eventToDetail = dataEvents.events.find(event => event.id == id);
+const eventToDetail = dataEvents.events.find(event => event._id == id);
 
 const divDetails = document.getElementById("divDetails");
 
 divDetails.innerHTML = ` <div class="row d-flex align-items-center">
                             <div class="col-md-6 d-flex justify-content-center">
                                 <figure class="figure">
-                                    <img src=${eventToDetail.image} class="figure-img img-fluid rounded" alt="default image">
-                                    <figcaption class="figure-caption"></figcaption>
+                                    <img src=${eventToDetail.image} class="figure-img img-detail img-fluid rounded" alt="default image">
+                                    <figcaption class="figure-caption">Event Category: ${eventToDetail.category}</figcaption>
                                 </figure>
                             </div>
                             <div class="col-md-6 d-flex justify-content-center">
