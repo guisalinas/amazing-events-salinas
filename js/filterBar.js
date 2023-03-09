@@ -66,16 +66,28 @@ btnReset.addEventListener('click',()=> {
 
 //notFoundMesage
 const titleSection = document.getElementById("section-title").textContent;
+let urlImage = "";
+
+function getUrlImage(title){
+    if (title == "HOME"){
+        return urlImage = "./assets/notFound.png";
+    } else {
+        return urlImage = "../assets/notFound.png";
+    }
+}
 
 function notFoundMessage() {
+
+    url = getUrlImage(titleSection);
+
     return divMessage = `<div class="container ps-2 d-flex justify-content-center flex-wrap align-items-center">
         <div class="img-notFound">
-            <img src="../assets/notFound.png" alt="message: not found">
+            <img src=${url} alt="message: not found">
         </div>
         <div>
             <h3>Oops! Nothing to show here...</h3>
             <p>Sorry, we couldn't find the content you're looking for.<p>
+            </p>
         </div>
     </div>`
-
 };
