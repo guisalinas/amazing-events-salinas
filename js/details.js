@@ -26,7 +26,5 @@ divDetails.innerHTML = ` <div class="row d-flex align-items-center">
                                         <p class="d-flex align-items-center">${tagIcon} Price: $${eventToDetail.price}</p>
                                     </div>
                                 </div>
-                                
                             </div>
                         </div>`
-
