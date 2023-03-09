@@ -86,8 +86,8 @@ function notFoundMessage() {
         </div>
         <div>
             <h3>Oops! Nothing to show here...</h3>
-            <p>Sorry, we couldn't find the content you're looking for.<p>
-            </p>
+            <p>We couldn't find the content you're looking for.<p>
+            <p>Please, try with other categories, name, or check other web sections.</p>
         </div>
     </div>`
 };
