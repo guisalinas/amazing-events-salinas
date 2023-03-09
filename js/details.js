@@ -27,4 +27,7 @@ divDetails.innerHTML = ` <div class="row d-flex align-items-center">
                                     </div>
                                 </div>
                             </div>
+                            <div class="d-flex justify-content-end">
+                                <a href="javascript:history.back()" class="btn btn-secondary"> Back </a>
+                            </div>
                         </div>`
