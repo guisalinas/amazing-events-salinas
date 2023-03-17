@@ -7,7 +7,6 @@ const id = params.get("id");
 (async()=>{
     const dataEvents = await getData();
     events = dataEvents.events;
-     
     const eventToDetail = dataEvents.events.find(event => event._id == id);
     
     const divDetails = document.getElementById("divDetails");

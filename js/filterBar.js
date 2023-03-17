@@ -4,8 +4,8 @@
 
     // This function extracts the categories from the array events, in dataEvents object.
     function getCategories() {
-        let uniqueCategory = [...new Set(dataEvents.events.map(event => event.category))];
-        return uniqueCategory;
+        let uniquesCategories = [...new Set(dataEvents.events.map(event => event.category))];
+        return uniquesCategories;
     }
 
     // categories list view
@@ -30,6 +30,7 @@
 
     function addCard(data) {
         let card = "";
+        let urlEvent = getUrlDetails(titleSection)
 
         for (const event of data) {
             card += `<div id="eventCard" class="card m-2" style="width: 16rem;">
@@ -40,7 +41,7 @@
                     </div>
                     <div class="d-flex justify-content-between aligne-items-center">
                         <h6 class="card-text text-end mt-2 ms-3"> Price: $${event.price}</h6>
-                        <a href="./pages/details.html?id=${event._id}" class="btn btn-sm btn-secondary me-3 mb-3">Show More</a>
+                        <a href=${urlEvent}?id=${event._id} class="btn btn-sm btn-secondary me-3 mb-3">Show More</a>
                     </div>
                 </div>`
         }
@@ -104,6 +105,14 @@ function getUrlImage(title) {
         return urlImage = "./assets/notFound.png";
     } else {
         return urlImage = "../assets/notFound.png";
+    }
+}
+
+function getUrlDetails(title) {
+    if (title == "HOME") {
+        return urlImage = "./pages/details.html";
+    } else {
+        return urlImage = "../pages/details.html";
     }
 }
 
