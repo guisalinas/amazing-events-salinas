@@ -5,9 +5,17 @@
     const currentDate = dataEvents.currentDate;
     const arrayCategories = getCategories(events);
 
-    let arrayUpcoming = getUpcomingEvents(events, currentDate);
-    let arrayPast = getPastEvents(events, currentDate);
+    let arrayUpcoming = [];
+    let arrayPast = [];
 
+    for (const event of events) {
+        if (event.date >= currentDate) {
+            arrayUpcoming.push(event);
+        }
+        else if (event.date < currentDate) {
+            arrayPast.push(event);
+        }
+    }
 
     // 'events statistics' table: 
     const statictisTBody = document.getElementById("statictis-tBody");
@@ -35,7 +43,6 @@
     // 'statictis by category' table
     const statictisUpcomingTbody = document.getElementById('statictisUpcomingTbody');
     const statictispastTbody = document.getElementById('statictisPastTbody')
-
 
     function addTrStatictisByCategory(arrayCategories, arrayEvents, propertyAssistanceName) {
         let trStatictisCategory = "";
@@ -70,31 +77,9 @@
     let dtPastElement = addTrStatictisByCategory(arrayCategories, arrayPast, 'assistance');
     statictispastTbody.innerHTML = dtPastElement;
 
-    //upcoming events
-    function getUpcomingEvents(arrayEvents, date) {
-        let array = [];
-        for (const event of arrayEvents) {
-            if (event.date >= date) {
-                array.push(event);
-            }
-        }
-        return array;
-    }
-
-    // past events
-    function getPastEvents(arrayEvents, date) {
-        let array = [];
-        for (const event of arrayEvents) {
-            if (event.date < date) {
-                array.push(event);
-            }
-        }
-        return array;
-    }
-
     // Percentage
     function getPercentage(capacity, assistance) {
-        if (capacity != 0){
+        if (capacity != 0) {
             let percentage = Number.parseFloat((assistance / capacity) * 100).toFixed(2);
             return percentage;
         }
