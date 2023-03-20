@@ -91,7 +91,7 @@ function notFoundMessage() {
 
     url = getUrlImage(titleSection);
 
-    return divMessage = `<div class="container ps-2 d-flex justify-content-center flex-wrap align-items-center">
+    return divMessage = `<div class="container ps-2 d-flex justify-content-center flex-wrap align-items-center message-container">
     <div class="img-notFound">
     <img src=${url} alt="message: not found">
     </div>

@@ -29,8 +29,8 @@
 
         for (let i = 0; i <= 2; i++) {
             trStatictis += `<tr>
-                                <td>${arrayAsc[i].name} <span>(%${getPercentage(arrayAsc[i].capacity, arrayAsc[i].assistance)}) </span></td>
-                                <td>${arrayDesc[i].name} <span>(%${getPercentage(arrayDesc[i].capacity, arrayDesc[i].assistance)}) </span></td>
+                                <td>${arrayAsc[i].name} <span>(${getPercentage(arrayAsc[i].capacity, arrayAsc[i].assistance)}%) </span></td>
+                                <td>${arrayDesc[i].name} <span>(${getPercentage(arrayDesc[i].capacity, arrayDesc[i].assistance)}%) </span></td>
                                 <td>${arrayLargerCapacity[i].name} <span>(${arrayLargerCapacity[i].capacity} max. capacity)</td>
                             </tr>`
         }
