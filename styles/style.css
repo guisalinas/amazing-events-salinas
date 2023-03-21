@@ -7,14 +7,21 @@
     color: #ff0084;
 }
 
-/*--- Defoult Mode: Ligth ---*/
+/*--- general style /  defoult mode: Ligth ---*/
+.no-transition{
+  transition: none;
+}
 
-/*--general--*/
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     color: #454545;
+}
+
+body, .navbar {
+    background-color: whitesmoke;
+    transition: all 0.5s;
 }
 
 main {
@@ -26,150 +33,150 @@ main {
 }
 
 .navbar-nav .nav-link.active {
-    color: #ff0084;
+  color: #ff0084;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #ff0084;
+  color: #ff0084;
 }
 
 .header-page {
-    background: linear-gradient(
+  background: linear-gradient(
     158deg,
     rgba(162, 35, 101, 1) 0%,
     rgba(217, 3, 104, 1) 54%,
     rgba(162, 35, 101, 1) 100%
-    );
-    color: aliceblue;
+  );
+  color: aliceblue;
 }
 
 .header-page a,
 .header-page i {
-    color: aliceblue;
-    font-weight: bolder;
-    font-size: 1.5em;
+  color: aliceblue;
+  font-weight: bolder;
+  font-size: 1.5em;
 }
 
 footer {
-    background-color: #a22365;
+  background-color: #a22365;
 }
 
 footer h3,
 footer i {
-    color: aliceblue;
+  color: aliceblue;
 }
 
 footer i {
-    font-size: 150%;
-    margin: 0.5rem;
+  font-size: 150%;
+  margin: 0.3rem;
 }
 
 .contact-main {
-    background-image: url(../assets/people.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: grayscale(100%);
+  background-image: url(../assets/people.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(100%);
 }
 
 /*--card--*/
 .card {
-    box-shadow: -1px 2px 20px -1px rgba(163, 161, 163, 0.75);
+  box-shadow: -1px 2px 20px -1px rgba(163, 161, 163, 0.75);
 }
 
 .card h5 {
-    color: #d90368;
+  color: #d90368;
 }
 
 .card-img-top {
-    height: 150px;
-    object-fit: cover;
+  height: 150px;
+  object-fit: cover;
 }
 
 /*--form--*/
 .form-container label,
 .form-container legend {
-    color: #a22365;
+  color: #a22365;
 }
 
 .form-container legend {
-    text-align: center;
+  text-align: center;
 }
 
 .form-container {
-    max-width: 550px;
-    background-color: rgba(255, 255, 255, 0.801);
-    filter: blur(50%);
-    box-shadow: -1px 2px 27px -1px rgba(0, 0, 0, 0.75);
+  max-width: 550px;
+  background-color: rgba(255, 255, 255, 0.801);
+  filter: blur(50%);
+  box-shadow: -1px 2px 27px -1px rgba(0, 0, 0, 0.75);
 }
 
 ::placeholder {
-    font-size: small;
-    font-style: italic;
-    color: rgba(95, 93, 93, 0.575);
+  font-size: small;
+  font-style: italic;
+  color: rgba(95, 93, 93, 0.575);
 }
 
 /*--table stats--*/
 .table-container {
-    border: solid 2px #d11174;
-    box-shadow: -1px 2px 20px -1px rgba(163, 161, 163, 0.75);
+  border: solid 2px #d11174;
+  box-shadow: -1px 2px 20px -1px rgba(163, 161, 163, 0.75);
 }
 
 .stats-table span {
-    color: #d11174;
+  color: #d11174;
 }
 
 /*--details--*/
 .card-detail {
-    max-width: 800px;
-    border: solid 3px #d11174;
+  max-width: 800px;
+  border: solid 3px #d11174;
 }
 
 .img-detail {
-    height: 200px;
-    object-fit: cover;
+  height: 200px;
+  object-fit: cover;
 }
 
 /*--- not found message*/
 .search-text-message {
-    color: #a22365;
-    font-weight: bolder;
+  color: #a22365;
+  font-weight: bolder;
 }
 
 p.text-justify {
-    text-align: justify;
+  text-align: justify;
 }
 
 /*--- Dark Mode ---*/
 
-@media (prefers-color-scheme: dark) {
-  * {
-    color: aliceblue;
-    }
+.dark-mode * {
+  color: aliceblue;
+}
 
-    body,
-    .navbar {
-        background-color: #111;
-    }
+.dark-mode,
+.dark-mode .navbar {
+  background-color: #2c2c2c;
+  transition: all 0.3s;
+}
 
-    .card-detail p,
-    .figure-caption,
-    .nav-link,
-    .message-container p {
-        color: aliceblue;
-    }
+.dark-mode .card-detail p,
+.dark-mode .figure-caption,
+.dark-mode .nav-link,
+.dark-mode .message-container p {
+  color: aliceblue;
+}
 
-    .stats-table span {
-        color: #ff0084;
-    }
+.dark-mode .stats-table span {
+  color: #ff0084;
+}
 
-    .table-container,
-    .card-detail,
-    .card {
-        background-color: #2e2e2e;
-        box-shadow: none;
-    }
+.dark-mode .table-container,
+.dark-mode .card-detail,
+.dark-mode .card {
+  background-color: #252525;
+  transition: all 0.5s;
+  box-shadow: none;
+}
 
-    .navbar-toggler-icon {
-        filter: invert();
-    }
+.dark-mode .navbar-toggler-icon {
+  filter: invert();
 }
