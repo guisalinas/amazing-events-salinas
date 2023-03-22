@@ -93,7 +93,7 @@ function notFoundMessage() {
 
     return divMessage = `<div class="container ps-2 d-flex justify-content-center flex-wrap align-items-center message-container">
     <div class="img-notFound">
-    <img src=${url} alt="message: not found">
+    <img src=${url} class="img-fluid" alt="message: not found">
     </div>
     <div>
     <h3>Oops! Nothing to show here...</h3>
